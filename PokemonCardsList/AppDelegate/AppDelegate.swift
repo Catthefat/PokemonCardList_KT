@@ -1,8 +1,7 @@
 //
 //  AppDelegate.swift
-//  PokemonCardList_KT
+//  PokemonCardsList
 //
-//  Created by kristians.tide on 19/11/2021.
 //
 
 import UIKit
