@@ -11,13 +11,15 @@ struct Pokemon: Decodable {
     let name: String
     let image: String
     let number: String
+    let hp: String?
     let supertype: String?
     let subtype: String?
+
     
     enum CodingKeys: String, CodingKey{
         case name, id
         case image = "imageUrl"
-        case number, supertype, subtype
+        case number, supertype, subtype, hp
     }
 }
 

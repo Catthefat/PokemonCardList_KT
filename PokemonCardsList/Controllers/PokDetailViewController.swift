@@ -6,13 +6,32 @@
 //
 
 import UIKit
+import SDWebImage
+
+
 
 class PokDetailViewController: UIViewController {
+    
+    var pokemon: Pokemon!
 
+    @IBOutlet weak var label5: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var Label1: UILabel!
+    @IBOutlet weak var PokNameLabel: UILabel!
+    @IBOutlet weak var PokImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        PokNameLabel.text = pokemon.name
+        PokImageView.sd_setImage(with: URL(string: pokemon.image), placeholderImage: UIImage(named: "pok.png"))
+        Label1.text = "Card Value: " + pokemon.number
+        label3.text = "Pokemons Subtype: " + pokemon.subtype!
+        label2.text = "Pokemons HP: " + pokemon.hp!
+        label4.text = "Pokemons Supertype: " + pokemon.supertype!
+        label5.text = "Card ID: " + pokemon.id
+        
     }
     
 

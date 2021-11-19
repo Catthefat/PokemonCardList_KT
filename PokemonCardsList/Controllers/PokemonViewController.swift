@@ -76,6 +76,20 @@ extension PokemonViewController: UITableViewDelegate, UITableViewDataSource {
    // #warning("Home task - Navigata to DetailViewController and present the same data you have inside the cell into new ViewController, similar we had in TrackList")
     // MARK: - Navigation
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableViewOutlet.indexPathForSelectedRow {
+            print("Index path:", indexPath)
+
+//        // Get the new view controller using segue.destination.
+        let detailVC = segue.destination as! PokDetailViewController
+
+//        // Pass the selected object to the new view controller.
+
+        detailVC.pokemon = pokey[indexPath.row]
+    }
+    }
+    
+    
 }
 
 
